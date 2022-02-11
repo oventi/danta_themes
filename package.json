@@ -4,6 +4,6 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "danta": "https://github.com/oventi/danta#master"
+    "danta": "https://github.com/oventi/danta#3.3.0"
   }
 }
