@@ -1,0 +1,9 @@
+{
+  "name": "danta-cow",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "private": true,
+  "dependencies": {
+    "danta": "https://github.com/oventi/danta#master"
+  }
+}

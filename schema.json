@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://oventi.org/danta/danta-cow.schema.json",
+  "title": "danta-cow",
+  "type": "object",
+  "required": ["title", "entries", "footer"],
+  "properties": {
+    "title": {
+      "$id": "#root/title",
+      "type": "string"
+    },
+    "entries": {
+      "$id": "#root/entries",
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entry" }
+    },
+    "footer": {
+      "$id": "#root/footer",
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "entry": {
+      "$id": "#root/entry",
+      "type": "object",
+      "required": ["slug", "title", "description"],
+      "properties": {
+        "slug": {
+          "$id": "#root/entry/slug",
+          "type": "string"
+        },
+        "title": {
+          "$id": "#root/entry/title",
+          "type": "string"
+        },
+        "image": {
+          "$id": "#root/entry/image",
+          "type": "object",
+          "required": ["url", "title"],
+          "properties": {
+            "url": {
+              "$id": "#root/entry/image/url",
+              "type": "string"
+            },
+            "title": {
+              "$id": "#root/entry/image/title",
+              "type": "string"
+            }
+          }
+        },
+        "description": {
+          "$id": "#root/entry/description",
+          "type": "string"
+        },
+        "cta": {
+          "$id": "#root/entry/cta",
+          "type": "object",
+          "required": ["url", "text"],
+          "properties": {
+            "url": {
+              "$id": "#root/entry/cta/url",
+              "type": "string"
+            },
+            "text": {
+              "$id": "#root/entry/cta/text",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
