@@ -1,14 +1,11 @@
 import danta from 'danta'
 
-danta.set_theme('danta-cow')
+danta.set_theme('llucho')
 
 export async function request(path, data) {
-  const {entries, ...global} = data
-  const is_home = path === '/'
-  const template = is_home ? 'home' : 'entry'
-  const page_data = is_home
-    ? {title: 'danta', entries}
-    : entries.find((e) => path === `/${e.slug}`)
+  const {...global} = data
+  const template = 'index'
+  const page_data = {}
 
   if(!page_data) {
     return {content: `${path} not found`, status: 404}
@@ -18,13 +15,9 @@ export async function request(path, data) {
 }
 
 export async function build(data) {
-  const {entries, ...global} = data
+  const {...global} = data
+  const template = 'index'
+  const page_data = {}
 
-  // build home
-  await danta.build('index.html', 'home', {global, title: 'danta', entries})
-
-  // build entry pages
-  for(const entry of entries) {
-    await danta.build(`${entry.slug}.html`, 'entry', {global, ...entry})
-  }
+  await danta.build('index.html', template, {global, ...page_data})
 }

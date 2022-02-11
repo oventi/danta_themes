@@ -11,24 +11,8 @@
     <link rel="stylesheet" href="/css/index.css">
     <script defer src="/js/index.js"></script>
 
-    <title>{{title}} | {{global.title}}</title>
+    <title></title>
   </head>
-  <body class="home">
-    <header>
-      <h1>{{global.title}}</h1>
-    </header>
-
-    <main>
-      {{#entries}}
-      <article>
-        <a href="/{{slug}}">
-          <img src="{{image.url}}" alt="{{image.title}}" />
-          <p>{{title}}</p>
-        </a>
-      </article>
-      {{/entries}}
-    </main>
-
-    {{> footer}}
+  <body>
   </body>
 </html>
