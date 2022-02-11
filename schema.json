@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://oventi.org/danta/danta-llucho.schema.json",
-  "title": "danta-llucho",
+  "$id": "https://oventi.org/danta/danta-techie-one-page.schema.json",
+  "title": "danta-techie-one-page",
   "type": "object",
   "required": [],
   "properties": {},

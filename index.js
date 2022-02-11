@@ -1,6 +1,6 @@
 import danta from 'danta'
 
-danta.set_theme('llucho')
+danta.set_theme('techie_one_page')
 
 export async function request(path, data) {
   const {...global} = data
