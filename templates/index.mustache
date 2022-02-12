@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{#lang}}{{.}}{{/lang}}{{^lang}}en{{/lang}}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,9 +11,26 @@
     <link rel="stylesheet" href="/css/index.css">
     <script defer src="/js/index.js"></script>
 
-    <title></title>
+    <title>{{meta_title}}</title>
   </head>
   <body>
-    techie_one_page
+    <header>
+      <div class="title_subtitle">
+        <h1 class="title">{{title}}</h1>
+        <p class="subtitle">{{subtitle}}</p>
+      </div>
+      <img class="avatar" alt="" src="{{avatar_url}}" />
+    </header>
+
+    <main>
+      {{#sections}}
+      <section id="{{id}}">
+        <h2 class="subtitle">{{title}}</h2>
+        {{{content}}}
+      </section>
+      {{/sections}}
+    </main>
+
+    <footer>{{footer}}</footer>
   </body>
 </html>

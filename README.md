@@ -1,1 +1,1 @@
-# techie_one_page
+# techie-one-page
