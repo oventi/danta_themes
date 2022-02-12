@@ -14,13 +14,16 @@
   border: 0 !important;
 }
 
-body {
+$base_space: 1em;
+$icon_size: 3em;
+
+html {
   font-family: sans-serif;
 }
 
 a.devicon_link {
   text-decoration: none;
-  font-size: 3em;
+  font-size: $icon_size;
 
   span {
     @include visually-hidden();
@@ -29,8 +32,6 @@ a.devicon_link {
 
 header,
 main {
-  margin-left: auto;
-  margin-right: auto;
   width: 90%;
   max-width: 992px;
 }
@@ -40,10 +41,16 @@ header {
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  margin: $base_space auto $base_space auto;
+
+  .title_subtitle {
+    margin-bottom: $base_space;
+  }
 
   .title {
     font-size: 1.5em;
     text-align: center;
+    margin: 0 0 $base_space 0;
   }
 
   .subtitle {
@@ -53,7 +60,7 @@ header {
   img.avatar {
     border-radius: 50%;
     max-width: 150px;
-    margin: 1.5em 0 0 0;
+    margin: 0;
   }
 }
 
@@ -61,14 +68,19 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 0 auto 0 auto;
 
   section {
     flex: 100%;
-    margin-bottom: 1em;
+    margin: 0 0 $base_space 0;
+
+    h2 {
+      margin: 0 0 $base_space 0;
+    }
   }
 }
 
 footer {
-  margin: 1.5em 0.5em;
+  margin: 0 $base_space $base_space $base_space;
   text-align: center;
 }
