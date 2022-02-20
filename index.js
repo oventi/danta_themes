@@ -23,9 +23,7 @@ export async function request(path, data) {
 }
 
 export async function build(data) {
-  const {...global} = data
-  const template = 'index'
-  const page_data = {}
+  const {base_url, ...rest} = data
 
-  await danta.build('index.html', template, {global, ...page_data})
+  await danta.build('index.html', 'index', {global: {base_url}, ...rest})
 }
